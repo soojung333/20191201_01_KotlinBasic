@@ -26,7 +26,25 @@ class MainActivity : AppCompatActivity() {
 
             Log.d("확인버튼클릭",inputString)
 
-            Toast.makeText(this, "내용이 반영되었습니다", Toast.LENGTH_SHORT).show()
+//            if (inputString == "Hello") {
+//                Toast.makeText(this,"환영인사",Toast.LENGTH_SHORT).show()
+//            }
+//            else if (inputString == "Bye") {
+//                Toast.makeText(this,"작별인사",Toast.LENGTH_SHORT).show()
+//            }
+//            else {
+//                Toast.makeText(this,"기타문장", Toast.LENGTH_SHORT).show()
+//            }
+
+            when (inputString) {
+                "Hello" -> {   Toast.makeText(this,"환영인사",Toast.LENGTH_SHORT).show()
+                Log.d("when연습","환영인사인 경우")
+                }
+                "Bye" -> {Toast.makeText(this,"작별인사",Toast.LENGTH_SHORT).show()}
+                else -> {Toast.makeText(this,"기타문장", Toast.LENGTH_SHORT).show()}
+            }
+
+
 
         }
 
