@@ -1,7 +1,9 @@
 package kr.co.tjoeun.a20191201_01_kotlinbasic
 
+import android.nfc.Tag
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -19,12 +21,18 @@ class MainActivity : AppCompatActivity() {
            var inputString = inputEdt.text.toString()    // get => 내용물 받아오기.
             resultTxt.text = inputString   // set => 내용물 설정하기.
 
+//            확인버튼이 눌렸는지 로그
+
+            Log.d("확인버튼클릭",inputString)
+
         }
 
         okBtn.setOnLongClickListener {
 
 
             resultTxt.text="초기상태"
+
+            Log.d("확인버튼롱클릭", "텍스트뷰 초기화")
 
             return@setOnLongClickListener true
 
